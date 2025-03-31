@@ -22,14 +22,13 @@ exit_btn.onclick = () => {
 }
 // /if continue button clicked
 continue_btn.onclick = () => {
-    info_box.classList.remove("activeInfo") // hide the info
     quiz_box.classList.add("activeQuiz") // show the quizBox.
+    info_box.classList.remove("activeInfo") // hide the info
     showQuestions(0);
     queCounter(1);
     startTimer(15);
     startTimerLine(0);
 }
-
 
 let que_count = 0;
 let que_numb = 1;
@@ -41,12 +40,12 @@ let userScore = 0;
 
 const next_btn = quiz_box.querySelector(".next_btn");
 const result_box = document.querySelector(".result_box");
-
-const quit_quiz = result_box.querySelector(".buttons .quit");
 const restart_quiz = result_box.querySelector(".buttons .restart");
-restart_quiz.onclick = () => {
-    quiz_box.classList.addZero("activeQuiz");
+const quit_quiz = result_box.querySelector(".buttons .quit");
+
+restart_quiz.onclick = ()=>{
     result_box.classList.remove("activeResult");
+    quiz_box.classList.add("activeQuiz");
    
     let que_count = 0;
     let que_numb = 1;
@@ -133,10 +132,7 @@ function optionSelected(answer) {
             }
         }
     }
-
-
-
-    // once user selected disable all option
+// once user selected disable all option
 
 
     for (let i = 0; i < allOptions; i++) {
