@@ -11,7 +11,7 @@ body{
 .start_btn,
 .info_box,
 .quiz_box,
-.result-box{
+.result_box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,7 +24,7 @@ body{
 
 .info_box.activeInfo,
 .quiz_box.activeQuiz,
-.result_box .activeResult{
+.result_box.activeResult{
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
