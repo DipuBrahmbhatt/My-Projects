@@ -24,7 +24,7 @@ body{
 
 .info_box.activeInfo,
 .quiz_box.activeQuiz,
-.result_box.activeResult{
+.result_box .activeResult{
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
@@ -169,6 +169,7 @@ body{
     position: absolute;
     bottom: 0px;
     left:0px;
+    width: 50%;
     height: 3px;
     background: rgb(202, 141, 202);
 
@@ -277,7 +278,7 @@ footer .next_btn{
 footer .next_btn:hover{
     background:rgb(167, 107, 167) ;
 }
-.result-box{
+.result_box{
     background: #fff;
     width: 450px;
     padding: 25px 30px;
@@ -291,16 +292,16 @@ footer .next_btn:hover{
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
 }
-.result-box .icon{
+.result_box .icon{
     font-size: 100px;
     color: rgb(202, 141, 202);
     margin-bottom: 10px;
 }
-.result-box .complete_text{
+.result_box .complete_text{
     font-size: 20px;
     font-weight: 500;
 }
-.result-box .score_text span{
+.result_box .score_text span{
     display: flex;
     margin: 10px 0;
 }
@@ -308,11 +309,11 @@ footer .next_btn:hover{
     font-weight: 600;
     padding: 0 4px;
 }
-.result-box .buttons{
+.result_box .buttons{
     display: flex;
     margin: 20px 0;
 }
-.result-box .buttons button{
+.result_box .buttons button{
     margin: 0 10px;
     height: 40px;
     padding: 0 20px;
