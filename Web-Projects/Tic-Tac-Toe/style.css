@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    /* Sky blue gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #003366;
+    /* Navy blue */
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.box {
+    background-color: #ffffff;
+    border: none;
+    font-size: 2.5rem;
+    color: #003366;
+    /* Navy for good contrast */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box:hover {
+    background-color: #e6f2ff;
+    transform: scale(1.05);
+}
+
+.reset-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#reset-btn {
+    padding: 0.75rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#reset-btn:hover {
+    background-color: #005fa3;
+    transform: translateY(-2px);
+}
+
+/* Message container with center layout */
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2rem;
+    background: transparent;
+}
+
+/* Winner message with gradient text glow */
+#msg {
+    font-size: 9vmin;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: #003366;
+    
+   
+    letter-spacing: 2px;
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+
+
+/* New Game button with neon effect */
+#new-game {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff00c8, #00f0ff);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+#new-game:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 200, 0.7), 0 0 40px rgba(0, 240, 255, 0.8);
+}
+
+/* Hidden by default */
+.hide {
+   display: none;
+}
+
+
+
