@@ -1,0 +1,183 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: hsl(30, 38%, 92%);
+    --primary-color: hsl(158, 36%, 37%);
+    --title-color: hsl(212, 21%, 14%);
+    --text-color: hsl(228, 12%, 48%);
+    --hover-color: hsl(158, 42%, 18%);
+}
+
+body {
+    background: var(--background-color);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    display: flex;
+    max-width: 600px;
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+}
+
+.main-content {
+    flex: 1;
+    padding: 32px;
+    color: var(--text-color);
+}
+
+.main-content h5 {
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.main-content h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--title-color);
+
+    font-size: 32px;
+    line-height: 1;
+
+    margin-bottom: 24px;
+}
+
+.main-content p {
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+#text-green {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Fraunces', serif;
+    color: var(--primary-color);
+
+    font-size: 32px;
+
+    margin-bottom: 28px;
+}
+
+#text-green span {
+    margin-left: 20px;
+
+    font-size: 14px;
+    text-decoration: line-through;
+
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    width: 100%;
+
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+
+    padding: 15px;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--hover-color);
+}
+
+button img {
+    width: 15px;
+}
+
+
+.attribution {
+    position: fixed;
+
+    bottom: 10px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.attribution a {
+    color: var(--primary-color);
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .card {
+        flex-direction: column;
+        max-width: 350px;
+    }
+
+    .main-content {
+        padding: 24px;
+    }
+
+    .main-content h1 {
+        font-size: 28px;
+    }
+
+    .image-container img {
+        height: 240px;
+    }
+
+    .attribution {
+        bottom: 5px;
+        font-size: 10px;
+    }
+}
